@@ -1,65 +1,227 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-}
-
-section {
-    height: 800px;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #292929;
+  font-size: 16px;
+  line-height: 140%;
 }
 
 /* #region header */
 .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    box-sizing: border-box;
-    height: 100vh;
-    padding: 64px 120px;
-    background-image: url(images/header-bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 64px 120px;
+  background-image: url(images/Headphones-image-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.header__top {
-    display: flex;
-    justify-content: space-between;
+.header_top {
+  display: flex;
+  justify-content: space-between;
 }
 
+.header_title {
+  margin-top: 0;
+  margin-bottom: 64px;
+  font-size: 48px;
+  line-height: 100%;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -1.5px;
+  padding-top: 40px;
+  padding-bottom: 0;
+}
 /* #endregion */
 /* #region menu */
 .menu {
-    box-sizing: border-box;
-    height: 100vh;
-    padding: 64px 120px;
-    background: #E5E5E5;
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 64px 120px;
+  background: #e5e5e5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(-100%);
+  transition: transform 500ms;
 }
 
-.menu__top {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 64px;
+.menu:target {
+  transform: translateX(0);
+}
+
+.menu_top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
 }
 
 /* #endregion */
 /* #region nav */
-.nav {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+
+.nav_list {
+  padding: 0;
 }
 
-.nav__link {
-    color: #292929;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 22px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.nav_link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  list-style-type: none;
+  padding-top: 32px;
+}
+
+.nav_link a {
+  text-decoration: none;
+  color: #292929;
+}
+
+/* MAIN */
+
+.main {
+  padding: 120px;
+  background-color: white;
+}
+
+.recommended {
+  margin-bottom: 120px;
+}
+
+.recommended_products {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.product {
+  flex-basis: 324px;
+}
+
+.product_photo {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.product_title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.product_category {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.product_price {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* CATEGORIES */
+
+.categories {
+  max-width: 1020px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+}
+
+.category_photos {
+  display: flex;
+  gap: 3%;
+  margin-bottom: 16px;
+}
+
+.photo-wide {
+  width: 65%;
+}
+
+.photo_square {
+  width: 32%;
+}
+
+.category_title {
+  margin: 0;
+}
+
+.recommended_title {
+  font-size: 48px;
+  line-height: 100%;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -1.5px;
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+.categories_title {
+  font-size: 48px;
+  line-height: 100%;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -1.5px;
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+.how-to-buy_title {
+  font-size: 48px;
+  line-height: 100%;
+  font-weight: bold;
+  letter-spacing: -1.5px;
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+/* HOW TO BUY */
+
+.how-to-buy {
+  display: flex;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.how-to-buy_title {
+  flex-basis: 50%;
+}
+
+.how-to-buy_content {
+  flex-basis: 50%;
+}
+
+.how-to-buy_benefits {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+/* FOOTER */
+
+.footer {
+  height: 460px;
+  background-image: url(images/footer.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: sticky;
+  bottom: 0;
+  z-index: -1;
 }
